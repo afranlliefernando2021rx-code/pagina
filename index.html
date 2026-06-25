@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Camisetas Retro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+                <div class="d-flex align-items-center">
+                    <img 
+                        id="logoInicio"
+                        src="img/logotienda.jpeg"
+                        alt="Logo"
+                        class="logo-navbar">          
+                 <a class="navbar-brand text-white" href="#"> TIENDA DE CAMISETAS RETRO</a>
+                </div>
+            <div class="d-flex gap-2">
+            <button id="btnInicio"
+                    class="btn btn-outline-light">
+                    Inicio
+            </button>
+            <button id="btnSelecciones"
+                    class="btn btn-outline-light">
+                    Selecciones
+             </button>
+            <button id="btnEquipos"
+                    class="btn btn-outline-light">
+                    Equipos
+             </button>
+            <button id="btnCompra"
+                    class="btn btn-outline-light">
+                     Comprar
+            </button>
+        </div>
+        <input 
+            type="text"
+            id="buscador"
+            class="form-control w-25 ms-4"
+            placeholder="Buscar">
+        </div>
+        </nav>
+    </header>    
+    
+    <main class="container mt-4">
+        <div class="row">
+            
+            <div class="col-md-12">
+                <section id="inicio">
+                    <h2>Sobre Nosotros</h2>
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-center">
+                            <img 
+                                 src="img/inicio.jpeg"
+                                class="img-fluid"
+                                alt="Tienda">
+                        </div>
+                        <div class="col-md-6 text-center">
+                        <img
+                            src="img/inicio2.jpg"
+                            class="img-fluid"
+                            alt="Otra imagen">                    
+                        </div>
+                    </div>
+                    <p>Somos un grupo de amigos amantes de las camisetas de fútbol y su historia. Nos encanta coleccionar camisetas según su rareza, temporada, jugador y estilo. Queremos transmitirles esa pasión por el fútbol y el estilo, por lo tanto sean bienvenidos a nuestra página!</p>
+                </section>
+
+                <section id="selecciones" class="d-none">
+                    <h2>Selecciones</h2>
+                    <p class="texto-catalogo">
+                        Descubrí camisetas históricas de las selecciones más recordadas
+                    </p>
+                    <div class="contenedor-selecciones">
+                        <div class="italia">
+                        <img
+                            id="imgItalia"
+                            src="img/italia1994.jpg"
+                            class="imagen-seleccion"
+                            alt="Italia 1994">                       
+                        <h5>Italia 1994</h5>
+                        </div>
+                        <div class="brasil">
+                        <img
+                            id="imgBrasil"
+                            src="img/brasil2002.jpg"
+                            class="imagen-seleccion"
+                            alt="Brasil 2002">
+                        <h5>Brasil 2002</h5>
+                         </div>
+                        <div class="argentina">
+                        <img
+                            id="imgArgentina"
+                            src="img/argentina2006.jfif"
+                            class=" imagen-seleccion"
+                            alt="Argentina 2006">
+                            <h5>Argentina 2006</h5>
+                        </div>
+                    </div>
+                </section>
+                <section id="equipos" class="d-none">
+                    <h2>Equipos</h2>
+                    <p class="texto-catalogo">
+                        Descubrí camisetas históricas de clubes legendarios.
+                    </p>
+                    <div class="contenedor-equipos">
+                        <div class="independiente">
+                            <img 
+                                id="imgIndependiente"
+                                src="img/rojoboca.jpg"
+                                class="imagen-equipo"
+                                alt="Independiente Boca 1994">
+                            <h5>Independiente - Boca 1994</h5>
+                        </div>
+                        <div class="river">
+                            <img 
+                                id="imgRiver"
+                                src="img/river1997.jpg"
+                                class="imagen-equipo"
+                                alt="River 1999">
+                            <h5>River 1999</h5>
+                        </div>
+                        <div class="barcelona">
+                            <img 
+                                id="imgBarcelona"
+                                src="img/barcelonareal.avif"
+                                class="imagen-equipo"
+                                alt="Barcelona 2005">
+                            <h5>Barcelona - Real Madrid 2005</h5>
+                        </div>
+                    </div>
+                </section>
+                <section id="compra" class="d-none">
+                        <h2>Carrito</h2>
+                        <ul id="listaCarrito"></ul>
+                        <hr> 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img 
+                                    src="img/henryarsenal.jpg"
+                                    class="img-compra"
+                                    alt="Henry Arsenal">
+                            </div>
+                            <div class="col-md-8">    
+                        <form id="formCompra">
+                             <div class="mb-3">
+                                <label for="nombre" class="form-label">
+                                Nombre
+                                </label>
+                                <input 
+                                type="text"
+                                id="nombre"
+                                class="form-control"
+                                required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email
+                                </label>
+                                <input
+                                type="email"
+                                id="email"
+                                class="form-control" 
+                                required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cp" class="form-label">
+                                    Código Postal
+                                </label>
+                                <input
+                                type="number"
+                                id="cp"
+                                class="form-control"
+                                required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    Método de Pago
+                                </label>
+                                <select
+                                id="pago"
+                                class="form-select">
+                                <option>Tarjeta</option>
+                                <option>Transferencia Bancaria</option>
+                                <option>Mercado Pago</option>
+                                </select>
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-success">
+                                Finalizar Compra
+                            </button>
+                        </form>
+                        </div>
+                    
+                </section>
+                <section id="detalleItalia" class="d-none">
+                    <button id="volverItalia" class="btn btn-secondary mb-3">
+                        Volver
+                    </button>
+                    <div class="row">
+                        <div class="col-md-5">
+                        <img
+                            src="img/italiaproducto.jpeg"
+                            class="img-detalle"
+                            alt="Italia 1994">
+                        </div>
+                        <div class="col-md-7">
+                            <h2>Italia 1994</h2>
+                            <h3>$40.000</h3>
+                            <label>Talle</label>
+                            <select class="form-select mb-3">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <button class="btn btn-success">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section id="detalleBrasil" class="d-none">
+                    <button id="volverBrasil"
+                    class="btn btn-secondary mb-3">
+                    Volver 
+                    </button>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img
+                                src="img/brasilproducto.jpeg"
+                                class="img-detalle"
+                                alt="Brasil 2002">
+                        </div>
+                        <div class="col-md-7">
+                        <h2>Brasil 2002</h2>
+                        <h3>$40.000</h3>
+                        <label>Talle</label>
+                        <select class="form-select mb-3">
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                            <button class="btn btn-success">
+                            Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section id="detalleArgentina" class="d-none">
+                    <button id="volverArgentina"
+                    class="btn btn-secondary mb-3">
+                        Volver
+                    </button>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img 
+                                src="img/argentinaproducto.png"
+                                class="img-detalle"
+                                alt="Argentina 2006">
+                        </div>
+                        <div class="col-md-7">
+                            <h2>Argentina 2006</h2>
+                            <h3>$40.000</h3>
+                            <label>Talle</label>
+                            <select class="form-select mb-3">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <button class="btn btn-success">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section id="detalleRojoBoca" class="d-none">
+                    <button
+                        id="volverRojoBoca"
+                        class="btn btn-secondary mb-3">
+                        Volver
+                    </button>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <img 
+                                src="*"
+                                class="img-detalle"
+                                alt="Independiente 1994">
+                            <h2>Independiente 1994</h2>
+                            <h3>$40.000</h3>
+                            <label>Talle</label>
+                            <select class="form-select mb-3">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <button class="btn btn-success">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <img
+                                src="*"
+                                class="img-detalle"
+                                alt="Boca 1994">
+                            <h2>Boca Juniors 1994</h2>
+                            <h3>$40.000</h3>
+                            <label>Talle</label>
+                            <select class="form-select mb-3">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <button class="btn btn-success">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <section id="detalleRiver" class="d-none">
+                            <button
+                                id="volverRiver"
+                                class="btn btn-secondary mb-3">
+                            Volver
+                        </button>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <img
+                                    src="*"
+                                    class="img-detalle"
+                                    alt="River 1999">
+                            </div>
+                            <div class="col-md-7">
+                                <h2>River Plate 1999</h2>
+                                <h3>$40.000</h3>
+                                <label>Talle</label>
+                                <select class="form-select mb-3">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                                <button class="btn btn-success">
+                                    Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                        </section>
+                        <section id="detalleBarcelonaReal" class="d-none">
+                            <button
+                                id="volverBarcelonaReal"
+                                class="btn btn-secondary mb-3">
+                                Volver    
+                            </button>
+                        <div class="row">
+                            <img 
+                                src="*"
+                                class="img-detalle"
+                                alt="Barcelona 2005">
+                            <h2>Barcelona 2005</h2>
+                            <h3>$40.000</h3>
+                            <label>Talle</label>
+                            <select class="form-select mb-3">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <button class="btn btn-success">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <img
+                                src="*"
+                                class="img-detalle"
+                                alt="Real Madrid 2005">
+                            <h2>Real Madrid 2005</h2>
+                            <h3>$40.000</h3>
+                            <label>Talle</label>
+                            <select class="form-select mb-3">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <button class="btn btn-success">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer-custom mt-5">
+        <div class="container text-center">
+            <p>2026 Tienda de Camisetas Retro</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
