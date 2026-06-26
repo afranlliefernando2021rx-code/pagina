@@ -56,7 +56,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6 text-center">
                             <img 
-                                 src="img/inicio.jpeg"
+                                src="img/inicio.jpeg"
                                 class="img-fluid"
                                 alt="Tienda">
                         </div>
@@ -138,6 +138,7 @@
                         <h2>Carrito</h2>
                         <ul id="listaCarrito"></ul>
                         <hr> 
+                        <h3 id="total">$0</h3>
                         <div class="row">
                             <div class="col-md-4">
                                 <img 
@@ -196,6 +197,9 @@
                             </button>
                         </form>
                         </div>
+                        <div id="resumenCompra"></div>
+                        <hr>
+                        
                     
                 </section>
                 <section id="detalleItalia" class="d-none">
@@ -219,7 +223,7 @@
                                 <option>L</option>
                                 <option>XL</option>
                             </select>
-                            <button class="btn btn-success">
+                            <button id="btnItalia" class="btn btn-success">
                                 Agregar al carrito
                             </button>
                         </div>
@@ -247,7 +251,7 @@
                             <option>L</option>
                             <option>XL</option>
                         </select>
-                            <button class="btn btn-success">
+                            <button id="btnBrasil" class="btn btn-success">
                             Agregar al carrito
                             </button>
                         </div>
@@ -275,7 +279,7 @@
                                 <option>L</option>
                                 <option>XL</option>
                             </select>
-                            <button class="btn btn-success">
+                            <button id="btnArgentina" class="btn btn-success">
                                 Agregar al carrito
                             </button>
                         </div>
@@ -288,9 +292,9 @@
                         Volver
                     </button>
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                             <img 
-                                src="*"
+                                src="img/rojoproducto.png"
                                 class="img-detalle"
                                 alt="Independiente 1994">
                             <h2>Independiente 1994</h2>
@@ -302,13 +306,13 @@
                                 <option>L</option>
                                 <option>XL</option>
                             </select>
-                            <button class="btn btn-success">
+                            <button id="btnIndependiente" class="btn btn-success">
                                 Agregar al carrito
                             </button>
                         </div>
                         <div class="col-md-6">
                             <img
-                                src="*"
+                                src="img/bocaproducto.jpg"
                                 class="img-detalle"
                                 alt="Boca 1994">
                             <h2>Boca Juniors 1994</h2>
@@ -320,10 +324,12 @@
                                 <option>L</option>
                                 <option>XL</option>
                             </select>
-                            <button class="btn btn-success">
+                            <button id="btnBoca" class="btn btn-success">
                                 Agregar al carrito
                             </button>
                         </div>
+                    </div>
+                    </section>       
                         <section id="detalleRiver" class="d-none">
                             <button
                                 id="volverRiver"
@@ -333,7 +339,7 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <img
-                                    src="*"
+                                    src="img/riverproducto.jpeg"
                                     class="img-detalle"
                                     alt="River 1999">
                             </div>
@@ -347,7 +353,7 @@
                                     <option>L</option>
                                     <option>XL</option>
                                 </select>
-                                <button class="btn btn-success">
+                                <button id="btnRiver" class="btn btn-success">
                                     Agregar al carrito
                                 </button>
                             </div>
@@ -357,45 +363,47 @@
                             <button
                                 id="volverBarcelonaReal"
                                 class="btn btn-secondary mb-3">
-                                Volver    
+                                Volver
                             </button>
                         <div class="row">
-                            <img 
-                                src="*"
-                                class="img-detalle"
-                                alt="Barcelona 2005">
+                            <div class="col-md-6">
+                                <img
+                                    src="img/barcaproducto.jpeg"
+                                    class="img-detalle"
+                                    alt="Barcelona 2005">
                             <h2>Barcelona 2005</h2>
                             <h3>$40.000</h3>
                             <label>Talle</label>
-                            <select class="form-select mb-3">
+                                <select class="form-select mb-3">
                                 <option>S</option>
                                 <option>M</option>
                                 <option>L</option>
                                 <option>XL</option>
-                            </select>
-                            <button class="btn btn-success">
+                                </select>
+                            <button id="btnBarcelona" class="btn btn-success">
                                 Agregar al carrito
                             </button>
-                        </div>
-                        <div class="col-md-6">
-                            <img
-                                src="*"
-                                class="img-detalle"
-                                alt="Real Madrid 2005">
-                            <h2>Real Madrid 2005</h2>
-                            <h3>$40.000</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <img
+                                    src="img/realproducto.jpeg"
+                                    class="img-detalle"
+                                    alt="Real Madrid 2005">
+                                <h2>Real Madrid 2005</h2>
+                                <h3>$40.000</h3>
                             <label>Talle</label>
-                            <select class="form-select mb-3">
+                                <select class="form-select mb-3">
                                 <option>S</option>
                                 <option>M</option>
                                 <option>L</option>
                                 <option>XL</option>
-                            </select>
-                            <button class="btn btn-success">
+                                </select>
+                            <button id="btnReal" class="btn btn-success">
                                 Agregar al carrito
                             </button>
+                            </div>
                         </div>
-                        </section>
+                    </section>
                     </div>
                 </section>
             </div>
